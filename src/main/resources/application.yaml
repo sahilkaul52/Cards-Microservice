@@ -16,10 +16,16 @@ spring:
     show-sql: true
 
   profiles:
-    active:
-      - "qa"
+    active: prod
+
   application:
     name: cards
+
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
 
   config:
     import: "optional:configserver:http://localhost:8071"
